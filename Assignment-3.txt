@@ -1,0 +1,25 @@
+Algorithm-  to encode all characters in a message:
+
+1. Assign a unique number to each digit, special character, lowercase alphabet, and uppercase alphabet.
+
+2. For each character in the original message, replace it with the corresponding number from the assigned mapping.
+3. Concatenate all the numbers to create the encoded message.
+4. Send Message to Ram
+5. To decode the message, repeat the process in reverse, replacing each number with its corresponding character.
+
+Example: "Hello Ram"
+
+Mapping:
+
+0=0		a=10		A=36		!=62
+1=1		b=11		B=37		@=63
+2=2 		c=12		C=38		#=64
+......		.......		........		......
+9=9		z=35		D=61		?=70
+
+Encoded Message:
+44 14 21 21 24  53 10 48
+
+
+
+END
