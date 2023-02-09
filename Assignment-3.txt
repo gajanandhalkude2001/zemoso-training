@@ -11,15 +11,58 @@ Example: "Hello Ram"
 
 Mapping:
 
-0=0		a=10		A=36		!=62
-1=1		b=11		B=37		@=63
-2=2 		c=12		C=38		#=64
-......		.......		........		......
-9=9		z=35		D=61		?=70
+Encode the digits: For each digit in the message, replace it with its encoded version using the key. For example, if the key is 3, you could replace the digit "1" with "4".
 
-Encoded Message:
-44 14 21 21 24  53 10 48
+Encode the special characters: For each special character in the message, replace it with its encoded version using the key. You could use a similar approach as with the digits, or you could assign each special character a unique encoded version.
 
+Encode the lowercase alphabets: For each lowercase alphabet in the message, replace it with its encoded version using the key. For example, if the key is 3, you could replace the letter "a" with "d".
+
+Program:
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string encrypt(string message, int key) 
+{
+    string encoded_message = "";
+
+    for (char c : message)
+    {
+        encoded_message+= c+ key;
+    }
+
+    return encoded_message;
+}
+
+string decrypt(string message, int key) 
+{
+    string decoded_message = "";
+
+    for (char c : message)
+    {
+        decoded_message+=c- key;
+    }
+
+    return decoded_message;
+}
+int main() {
+    string message = "Hello, World!";
+    int key = 3;
+
+    cout << "Message: " << message << endl;
+    cout << "Encoded message: " << encrypt(message, key) << endl;
+    string decodeMessage=encrypt(message, key);
+    cout << "Decoded message: " << decrypt(decodeMessage, key) << endl;
+
+    return 0;
+}
+
+Output:
+
+Message: Hello, World!
+Encoded message: Khoor/#Zruog$
+Decoded message: Hello, World!
 
 
 END
