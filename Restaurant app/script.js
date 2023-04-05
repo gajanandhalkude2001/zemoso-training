@@ -134,14 +134,11 @@ table.addEventListener("drop", (e)=>{
     } );
 }  )
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let ite=["Veg Biryani","Chicken Biryani","Mutton Biryani","French fries","Apple juice","Lemon tea","Noodles", "Parotha","sandwich","cake","Biscuits"];
 let prises =[200,300,400,180,80,40,170,160,220,275,95];
 
-//new code
-
-////////////////////////////////////////
+//NC
 function popup(e) {
     document.querySelector('.modal').classList.add('unhide');
 
@@ -274,10 +271,7 @@ console.log(Total);
                 const Table= document.querySelector(`table`)  
         
                console.log( document.querySelector(`table`))
-           //    console.log(this.parentElement.rowIndex)
-            //   Table.remove(this.parentElement.rowIndex)
-          
-             //   document.querySelector(`table`).removeChild(document.querySelector(`table`).getElementById(`${i}`));
+           
                document.querySelector("table").deleteRow(this.parentElement.rowIndex);
                console.log(this.parentElement.rowIndex)
 
@@ -462,59 +456,6 @@ console.log(Total);
 
 
 
-// function popup(e) {
-//     let ide=e.target.closest('.table').id;
-//     console.log(ide)
-
-// let content='';
-// var food='';
-// var rate = 0;
-// var servings= 0;
-
-// let modal = document.querySelector('.modal');
-// while (modal.firstChild) {
-//     modal.removeChild(modal.firstChild);
-// }
-
-// for(let i=0;i<11;i++)
-// {
-//    if(arr2[ide][i]!=0) 
-//     {
-//    content=content+ite[i]+"    "+"Servings= "+arr2[ide][i]+"   "+"Rs."+prises[i]*arr2[ide][i]+"\n";
-
-//    food = ite[i];
-//    rate = prises[i]*arr2[ide][i];
-//    servings = arr2[ide][i];
-
-//    var tr = document.createElement('tr');
-//    var td0 = tr.appendChild(document.createElement('td'));
-//    var td1 = tr.appendChild(document.createElement('td'));
-//    var td2 = tr.appendChild(document.createElement('td'));
-//    var td3 = tr.appendChild(document.createElement('td'));
-//    var td4 = tr.appendChild(document.createElement('td'));
-   
-//    td0.innerHTML=i;
-//    td1.innerHTML=food;
-//    td2.innerHTML=rate;
-//    td3.innerHTML=servings;
-//    td4.innerHTML = '<input type="number" class="input-quantity" value="' + servings + '">';
-//    modal.appendChild(tr);
-
-
-//         // document.querySelector('.modal').append(content);
-//         // document.getElementById(".modal").style.display = "block";
-//    }
-   
-// }
-// // alert(content);
-// }
-
-
-
-
-
-
-
  
 
 
@@ -528,216 +469,4 @@ console.log(Total);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let arr=[
-//     {
-//         id:1,'Rs':0,Total Items:0
-//     },
-//     {
-//         id:2,'Rs':0,Total Items:0
-//     },
-//     {
-//         id:3,'Rs':0,items:0
-//     }
-// ]
-
-// let meal=[
-//     {
-//         id:1,name:"Chicken Biryani",price:250
-//     },
-//     {
-//         id:2,name:"Mutton Biryani",price:300
-//     } ,
-//     {
-//         id:3,name:"French Fries",price:150
-//     } ,
-//     {
-//         id:4,name:"Pizza",price:180
-//     } ,
-//     {
-//         id:1,name:"Chicken Biryani",price:250
-//     },
-//     {
-//         id:2,name:"Mutton Biryani",price:300
-//     } ,
-//     {
-//         id:3,name:"French Fries",price:150
-//     } ,
-//     {
-//         id:4,name:"Pizza",price:180
-//     } 
-// ]
-
-// let el=document.querySelector('.con1');
-// let html=``;
-// arr.forEach((item)=>{
-//     html=html+`
-//     <div class='itemss' id=${item.id} ondrop=drop(event)>
-//         <h1>Table
-//         ${item.id}
-//         </h1>
-//         <h5>
-//        price: ${item.price} |Total items:${item.items}
-//         </h5>
-
-        
-//     </div>
-//     `;
-     
-// })
-// console.log(html,el)
-// el.insertAdjacentHTML('beforeend',html)
-
-// html=``;
-// el=document.querySelector('.con2');
-// meal.forEach((item)=>{
-//     html=html+`
-//     <div class='items' draggable="true" id=${item.id} >
-//         <h1>
-//         ${item.name}
-//         </h1>
-//         <h5>
-//        price: ${item.price} 
-//         </h5>
-
-        
-//     </div>
-//     `;
-     
-// })
-// el.insertAdjacentHTML('beforeend',html)
-// let item = document.querySelectorAll('.items');
-// console.log(item)
-// // attach the dragstart event handler
-// item.forEach((x)=>{
-//     addEventListener('dragstart', dragStart);
-//     // addEventListener('dragover',dragOver);
-//     // addEventListener('dragleave',dragLeave);
-    
-
-// })
-// function dragOver(e)
-// {
-//     e.preventDefault();
-    
-
-// }
-// function dragStart(e) {
-//     console.log('drag starts...');
-//     console.log(e.target)
-//    // e.dataTransfer.setData('text/plain', item.textContent);
-//      e.dataTransfer.setData('text/plain', e.target.id);
-//  }
-//  function dragLeave(e)
-//  {
-//     e.preventDefault();
-//   const text = e.dataTransfer.getData('text/plain');
-//   const cell = e.target.closest('.itemss');
-//   if (cell) {
-//    // cell.innerHTML='vghnijkmkmk'
-//    // cell.textContent = "Hello";
-//   }
-//   console.log(cell)
-
-//  }
-
-//  item = document.querySelectorAll('.itemss');
-//  // attach the dragstart event handler
-// item.forEach((x)=>{
-//     // x.addEventListener('drop',drop);
-//    x. addEventListener('dragover',dragOver);
-//    x.addEventListener('dragleave',dragLeave);
- 
-
-
-//})
-// function drop(e)
-// {
-//     e.preventDefault()
-//     const id = e.dataTransfer.getData('text/plain');
-//     const droppedElement = document.getElementById(id);
-//     console.log(droppedElement,id)
-//       const idd=parseInt(e.target.id);
-//       console.log(idd,arr[idd-1])
-//       arr[idd].price=arr[idd].price+meal[id].price
-
-//    droppedElement.querySelector('h5').innerHTML=arr[idd].price;
-// }
+     <
