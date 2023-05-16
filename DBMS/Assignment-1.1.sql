@@ -1,0 +1,1 @@
+SELECT distinct title as comedy_movies from film , category where rating="PG-13" and category_id=5;

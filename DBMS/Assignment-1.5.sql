@@ -1,0 +1,2 @@
+-- select first_name, last_name ,count(title) from film JOIN actor on actor.actor_id = film.film_id where first_name="SEAN" film_actor and last_name="WILLIAMS"; 
+select count(film_id) from film_actor where actor_id=72;
