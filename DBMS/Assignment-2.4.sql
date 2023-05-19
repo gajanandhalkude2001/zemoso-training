@@ -1,3 +1,8 @@
+
+Question:
+Find out the top 3 rented category of movies by “PATRICIA JOHNSON”.
+
+Ans:
 select c1.name,COUNT(*) AS rentals_count
 from sakila.customer as c
 JOIN sakila.rental as r ON r.customer_id = c.customer_id
