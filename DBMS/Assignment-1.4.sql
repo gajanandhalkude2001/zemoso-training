@@ -1,3 +1,7 @@
+Question:
+ Find out the list of customers from Canada who have rented “NICK WAHLBERG” movies.
+ 
+Ans:
 SELECT DISTINCT c.customer_id, c.first_name
 FROM customer c
 JOIN address a ON c.address_id = a.address_id
