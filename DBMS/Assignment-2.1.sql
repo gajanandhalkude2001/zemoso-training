@@ -1,7 +1,7 @@
--- select count(film_id) as count from film where special_features="Deleted Scenes" and film_id 
--- 	IN (select film_id from film_category where category_id 
--- 		IN (select category_id from category where name="Documentary"));
+Question:
+Find out the number of documentaries with deleted scenes.
 
+Ans:
 SELECT count(film_id) as Total_Count
 FROM film
 WHERE special_features LIKE '%Deleted Scenes%' 
