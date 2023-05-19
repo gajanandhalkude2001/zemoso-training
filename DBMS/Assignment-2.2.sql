@@ -1,7 +1,7 @@
--- select * from film where film_id 
--- 	IN (select film_id from film_category where category_id 
--- 		IN( select category_id from category where name="Sci-Fi")) and (SELECT * FROM sakila.actor where first_name="Jon" and last_name="Stephens");
+Question:
+Find out the number of sci-fi movies rented by the store managed by Jon Stephens.
 
+Ans:
 SELECT COUNT(*) AS sci_fi_count
 FROM film f
 JOIN film_category fc ON f.film_id = fc.film_id
