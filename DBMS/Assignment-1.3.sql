@@ -1,3 +1,7 @@
+Question:
+Find out the list of customers from India who have rented sports movies.
+
+Ans:
 select * from customer inner join category on customer.customer_id = category.category_id inner join country on country.country_id = category.category_id where category_id = 44;
 SELECT c.category_id, c.name
 FROM category c
